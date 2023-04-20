@@ -1,18 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Team Express</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/pokemonfacicon.ico">
-  </head>
-  <body>
-    <header>
-    <img src="https://img.pokemondb.net/design/avif/header-md-2x.avif" alt="Pokemon Database" width="1250" fetchpriority="high" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Pokedex</title>
+</head>
+<link rel="shortcut icon" type="image/x-icon" href="img/pokemonfavicon.ico">
 
+<style>
+    #container{
+        width: 1200px;
+        margin: 0px auto;
+    }
+
+    .header{
+        background: lightblue;
+        height: 75px;
+        border: solid 2px #000;
+        color: white;
+    }
+
+    .sidebar{
+        float: left;
+        width: 176px;
+        height: 750px;
+        background: lightgrey;
+        border-left: solid 2px #000;
+        border-bottom: solid 2px #000;
+    }
+
+    .main{
+        background: white;
+        height: 750px;
+        border-right: solid 2px #000;
+        border-left: solid 2px #000;
+        border-bottom: solid 2px #000;
+        overflow: auto;
+    }
+
+    .button {
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.search_bar{
+    border-radius: 8px;
+    font-size:15px;
+	font-weight:bold;
+    padding:13px 0px;
+}
+.search_bar:active{
+    position:relative;
+    top:1px;
+}
+
+@media (min-width:800px) {
+        body {
+            background-color: lavender;
+        }
+    }
+
+@media (min-width:1200px){
+    body{
+        background-color: lightslategrey;
+    }
+}
+
+
+
+</style>
+
+<body>
     <div>
+        <img src="https://img.pokemondb.net/design/avif/header-md-2x.avif" alt="Pokemon Database" width="1250" fetchpriority="high" >
+    </div>
+
+    <div id="container">
+
+        <div class="header">
         <ul>
             <a class="button" href="#">Pokemon data</a>
             <a class="button" href="#">Game mechanics</a>
@@ -20,36 +104,24 @@
             <a class="button" href="#">Community/Other</a>
             <input class="search_bar" type="text" placeholder="Search" id="Search" required>
         </ul>
-    </div>
-    
-   </header>
+        </div>
 
-   <main>
-    <h2 style="font-size: 40px; text-align: center;">Pokemon Pokedex</h2>
-    <p class="panel">The Pokédex section has a wealth of information on all the Pokémon creatures from the entire game series. On the main list pages you can see the various stats of each Pokémon. Click a Pokémon's name to see a detailed page with Pokédex data, descriptions from previous games, sprites, evolutions, moves and more!</p>
-    </main>
-
-    <div>
-        <table>
-            <tr>
-                <td>
-                <h2>Native Pokedex</h2>
-        <p class="panel2">Each game has a native Pokédex with the Pokémon from that region.</p>
-        <nav>
+        <div class="sidebar">
             <ul>
-               <li><a href="./pages/kanto/kanto.html">Kanto</a> <p>(Red, Blue & Yellow)</p> </li>
+                <li><a href="./pages/kanto/kanto.html">Kanto</a> <p>(Red, Blue & Yellow)</p> </li>
                <li><a href="./pages/johto/johto.html">Johto</a> <p>(Gold, Silver & Crystal)</p> </li>
-            </ul>
-                 </td>
-                 <td>
-                    <h2>About Pokémon stats</h2>
+             </ul>
+        </div>
+
+        <div class="main">
+            <h2 style="font-size: 40px; text-align: center;">Pokemon Pokedex</h2>
+    <p class="panel">The Pokédex section has a wealth of information on all the Pokémon creatures from the entire game series. On the main list pages you can see the various stats of each Pokémon. Click a Pokémon's name to see a detailed page with Pokédex data, descriptions from previous games, sprites, evolutions, moves and more!</p>
+       
+    <h2>About Pokémon stats</h2>
                     <p>Every Pokémon creature has an array of stats. <b>HP</b> (Hit Points) is a Pokémon's life force. If your Pokémon's HP hits zero, it faints and is no longer usable in battle (it can still use Hidden Machines, though). The <b>Speed</b> stat decides which Pokémon will make the first move in battle. This stat can be critical in long battles.</p>
                     <p> <b>Attack</b> and <b>Special Attack</b> measure the strength of moves used by your Pokémon; the higher this is, the more damage you will do to opponents.Attack corresponds to moves in the Physical category, while Special Attack corresponds to Special moves.</p>
                     <p>Similarly, <b>Defense</b> and <b>Special Defence</b> measure the ability to take attacks from other Pokémon; the higher the stat is, the fewer Hit Points will be lost when attacked. Defense corresponds to moves in the Physical category, while Special Defense corresponds to Special moves.</p>          
-                 </td>
-             </tr>      
-        </nav>
-        </table> 
+        </div>
     
     <footer>
         <div>
@@ -57,6 +129,6 @@
                 Pokémon images &amp; names &copy; 1995-2023 Nintendo/Game Freak." <a href="/about#privacy">Privacy Policy</a></p>      
         </div>
     </footer>
-    <script src="./script.js"></script>
-  </body>
+
+</body>
 </html>
